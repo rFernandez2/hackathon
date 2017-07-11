@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* font-family: 'Merriweather Sans', sans-serif; */
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  margin: 30px;
+}
+
+.divider {
+	border-top: 1px solid #8c8b8b;
+}
+
+#subtitle {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 24px;
+    color: #007A90;
+}
+
+#category {
+
+}
+
+#content {
+
+}
+
+#sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    /* left: 0; */
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    right: 0;
+    background: #33CAE6;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}
