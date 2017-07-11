@@ -1,0 +1,5 @@
+http://nytimes.com
+http://bloomberg.com
+http://seekingalpha.com
+http://marketwatch.com
+http://wsj.com
