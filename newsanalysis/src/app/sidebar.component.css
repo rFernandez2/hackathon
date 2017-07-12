@@ -1,0 +1,14 @@
+#sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    right: 0;
+    background: #33CAE6;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+}

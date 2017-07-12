@@ -1,5 +1,13 @@
       <div id="mainarticle">
-        <div *ngIf="articles"> <div *ngFor="let item of articles.records">{{item.Name}}</div></div>
+        <div *ngIf="articles">
+          <div *ngFor="let article of articles.articles">
+              <div>
+                <a href="{{article.url}}">{{article.title}}</a>
+              </div>
+              <img [src]="article.image_url" />
+              <div>{{article.category}}</div>
+            </div>
+          </div>
         <div *ngIf="items">{{items}}</div>
         <div class="articletitle">Article Title</div>
         <div class="img">

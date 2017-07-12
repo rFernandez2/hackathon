@@ -1,5 +1,6 @@
 export class ArticleObj {
-  Name: string;
-  City: string;
-  Country: string;
+  title: string;
+  url: string;
+  image_url: string;
+  category: string;
 }

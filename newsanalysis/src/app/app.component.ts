@@ -7,5 +7,5 @@ import { ArticleComponent } from './article.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'News Analysis';
 }
