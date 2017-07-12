@@ -41,7 +41,7 @@ def analyze_articles(sources):
     for article, sentiment in zip(articles, sentiments):
         keywords.append([tldextract.extract(article.url).domain] + [article.title] + [article.url] + [article.top_image] + [round(sentiment, 2)] +  list(set(article.keywords)))
     
-    df = pd.DataFrame(keywords).drop_duplicates(subset=[0, 1, 3])
+    df = pd.DataFrame(keywords).drop_duplicates(subset=[0, 3])
     keywords = df.values.tolist()
 
     with open("./keywords.csv", "w+") as file:
@@ -78,7 +78,9 @@ def categorize_articles():
             for i, category in enumerate(categories):
                 for c_key in category[1:]:
                     if c_key == a_key:
+                        print(c_key)
                         scores[i] = scores[i] + 1
+        # print(scores)
         if not any(scores) or sum(scores) <= 1:
             categories_pred.append(-1)
         else:

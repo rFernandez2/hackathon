@@ -1,9 +1,9 @@
 oil,oil,brent,crude,gasoline,barrel
-gold,gold,carat 
+gold,gold,carat
 copper,copper
-equity,equities,equity,stock,stocks,NYSE, 
-fixed income,treasury,bonds,fixed,income,mortgage,mortgages,mbs,ginnie,fannie,mae,gnma,fnma,
-hedge fund,hedge,fund, 
-private equity,private, 
+equity,equities,equity,stock,stocks,NYSE
+fixed income,treasury,bonds,fixed,income,mortgage,mortgages,mbs,ginnie,fannie,mae,gnma,fnma
+hedge fund,hedge,fund
+private equity,private
 venture capital,venture
 monetary policy,policy,federal,reserve,fed,yellen,fiscal,reform
