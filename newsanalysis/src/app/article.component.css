@@ -1,0 +1,16 @@
+#content {
+    margin-top: 90px;
+}
+
+.gridimg {
+  overflow: hidden;
+}
+
+img.gridimg {
+    height: auto;
+    width: 400px;
+}
+
+.articleobj {
+
+}
