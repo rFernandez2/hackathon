@@ -30,4 +30,8 @@ export class ArticleComponent implements OnInit {
         })
   }
 
+  sendArticles(): ArticleObj[] {
+    return this.articles;
+  }
+
 }

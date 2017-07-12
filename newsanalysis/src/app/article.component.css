@@ -1,16 +1,41 @@
-#content {
-    margin-top: 90px;
-}
-
 .gridimg {
   overflow: hidden;
 }
 
 img.gridimg {
-    height: auto;
+    height: 250px;
     width: 400px;
 }
 
 .articleobj {
+  width: 400px;
+  height: 100%;
+  float: left;
+}
+
+.articleitem {
+    padding: 10px;
 
 }
+
+.articlecategory {
+    font-size: 14px;
+    color: #4A4A4A;
+    border-radius: 5px;
+    border: 3px solid #3CCA30;
+    width: 375px;
+    margin-left: 10px;
+}
+
+.mat-grid-tile {
+    display: block;
+    position: absolute;
+    overflow: visible;
+}
+.articleUrl{
+  height: 90px;
+}
+
+
+/* grid */
+

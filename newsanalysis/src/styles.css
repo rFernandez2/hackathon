@@ -7,6 +7,13 @@ body {
   color: #4A4A4A;
 }
 
+a {
+    font-size: 24px;
+    color: #4A4A4A;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
 .divider {
 	border-top: 1px solid #8c8b8b;
 }

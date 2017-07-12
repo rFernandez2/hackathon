@@ -1,24 +1,17 @@
       <div id="mainarticle">
         <div *ngIf="articles">
-          <!--<md-grid-list cols="2" rowHeight="2:1">
-            <md-grid-tile>-->
-              <div class="articleobj" *ngFor="let article of articles.articles; let i=index">
-                <template [ngIf]="i<5">
-                  <div>
-                    <a href="{{article.url}}">{{article.title}}</a>
+              <div *ngFor="let article of articles.articles; let i=index">
+                  <div class="articleobj" layout="column" layout-fill>
+                    <template [ngIf]="i<5">
+                      <div class="articleUrl">
+                        <a href="{{article.url}}">{{article.title}}</a>
+                      </div>
+                      <div class="gridimg articleitem">
+                        <img class="gridimg" [src]="article.image_url" />
+                      </div>
+                      <div class="articleitem articlecategory">{{article.category}}</div><br><br>
+                    </template>
                   </div>
-                  <div class="gridimg">
-                    <img class="gridimg" [src]="article.image_url" />
-                  </div>
-                  <div>{{article.category}}</div>
-                </template>
               </div>
-            <!--</md-grid-tile>
-          </md-grid-list>-->
-        </div>
-        <div class="analysis">
-          <div class="analysisImg">
-            <img src="assets/check.png" />
-          </div>
         </div>
       </div>
