@@ -3,3 +3,5 @@ http://bloomberg.com
 http://seekingalpha.com
 http://marketwatch.com
 http://wsj.com
+http://businessinsider.com
+http://theguardian.com

@@ -1,5 +1,6 @@
 import nltk
 import numpy as np
+import pandas as pd
 import math
 import csv
 import json
@@ -40,6 +41,9 @@ def analyze_articles(sources):
     for article, sentiment in zip(articles, sentiments):
         keywords.append([tldextract.extract(article.url).domain] + [article.title] + [article.url] + [article.top_image] + [round(sentiment, 2)] +  list(set(article.keywords)))
     
+    df = pd.DataFrame(keywords).drop_duplicates(subset=[0, 1, 3])
+    keywords = df.values.tolist()
+
     with open("./keywords.csv", "w+") as file:
         writer = csv.writer(file)
         writer.writerows(keywords)
@@ -54,7 +58,7 @@ def read_keywords():
             keywords.append(row)
     return keywords
 
-def categorize_articles(keywords):
+def categorize_articles():
     categories = []
     with open("./key_maps.csv", "r+") as file:
         reader = csv.reader(file, delimiter=",")
@@ -150,3 +154,14 @@ def ez_sentiment(articles):
             sentiments.append(0)
 
     return sentiments
+
+
+def run():
+    print("Getting Articles")
+    sources = get_articles()
+    print("Analyzing Articles")
+    keys = analyze_articles(sources)
+    print("Categorizing Articles")
+    data = categorize_articles()
+    print("Generating JSON")
+    return toJson(data)
