@@ -3,12 +3,12 @@
 /* font-family: 'Merriweather Sans', sans-serif; */
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Lato', sans-serif;
   color: #4A4A4A;
 }
 
 a {
-    font-size: 24px;
+    font-size: 18px;
     color: #4A4A4A;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
@@ -16,6 +16,9 @@ a {
 
 .divider {
 	border-top: 1px solid #8c8b8b;
+  margin-left: 35px;
+  margin-bottom: 30px;
+  width: 94.5%;
 }
 
 #subtitle {
@@ -26,6 +29,7 @@ a {
 }
 
 #category {
-
+  margin-left: 35px;
+  font-size: 24px;
 }
 

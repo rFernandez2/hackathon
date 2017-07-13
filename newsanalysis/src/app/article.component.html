@@ -1,4 +1,9 @@
       <div id="mainarticle">
+        <div id="category" class="categorytitle">{{articleService.getTitle()}}</div>
+
+        <br>
+        <hr class="divider">
+
         <div id='sidebar'>
           <div id='filterText'><strong>Filter</strong></div><br><br>
           <div id="radio-btn-group">
@@ -9,6 +14,7 @@
             <input type="radio" name="gender" id ="alternatives-btn" value="alternatives" (click) ="clickRadio('alternatives')"> Alternatives
           </div>
         </div>
+
         <div id="articles" layout="column" *ngIf="filteredList">
           <md-grid-list cols="3" rowHeight="1:1.25">
                <div class="childarticle" *ngFor="let article of articleService.getArts(selected); let i=index">
@@ -21,11 +27,15 @@
                       <div class="gridimg articleitem">
                         <img class="gridimg" [src]="article.image_url" />
                       </div>
-                      <div class="articleitem articlecategory">{{article.category}}</div><br><br>
+                      <div class="articleitem articlecategory">
+                        <div class="sentiment">{{article.sentiment}}</div>
+                        <div class="category">{{article.category}}</div>
+                      </div><br><br>
                     </template>
                   </div>
                  </md-grid-tile>
               </div>
           </md-grid-list>
         </div>
+
       </div>

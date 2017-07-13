@@ -15,8 +15,11 @@ const ARTICLES =
 export class ArticleService {
 
   articleUrl = 'assets/article.json';
+  title = 'Most Popular';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.title = 'Most Popular';
+  }
 
   getArticles() {
     return this.http.get(this.articleUrl)
@@ -30,8 +33,15 @@ export class ArticleService {
 
   };
 
+getTitle() {
+  if (this.title == "") {
+    return 'Most Popular';
+  }
+  return this.title;
+}
 
 getArts(filterValue:string){
+  this.title = filterValue;
   var temp = JSON.stringify(ARTICLES);
     var articles = JSON.parse(temp);
         var filteredList = [];
