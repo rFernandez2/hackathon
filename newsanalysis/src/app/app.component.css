@@ -1,5 +1,5 @@
 .title {
-  font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
     background: #FFFFFF;
     box-shadow: 0 2px 4px 0 rgba(189,189,189,0.50);
     position: fixed;
@@ -7,6 +7,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    height: 76px;
 }
 
 #content {
@@ -19,8 +20,17 @@
   font-size: 30px;
 }
 
+#newspaper {
+    display: inline-block;
+    position: relative;
+    left: 330px;
+}
+
 #logocontent {
-  margin: 30px;
+    display: inline-block;
+    position: relative;
+    top: -25px;
+    left: 43px;
 }
 
 #logo {
