@@ -158,6 +158,27 @@ def ez_sentiment(articles):
     return sentiments
 
 
+def nice_display(st):
+    if st == 'equity':
+        return 'equities'
+    elif st == 'fixed income':
+        return st
+    elif st == 'gold' or st == 'oil' or st == 'copper':
+        return 'commodities'
+    elif st == 'hedge fund' or st == 'private equity':
+        return 'alternatives'
+
+def get_avgs(data):
+    df = pd.DataFrame(data)[['brand', 'category', 'sentiment']]
+    df['sentiment'] = df[['sentiment']].apply(pd.to_numeric)
+    df['category'] = df[['category']].applymap(nice_display)
+    vals = dict(df.groupby(['category']).mean().reset_index().values.tolist())
+    with open("avgs_data.json", "w+") as file:
+        file.write("{ \"averages\":")
+        json.dump(vals, file)
+        file.write("}")
+    return vals 
+
 def run():
     print("Getting Articles")
     sources = get_articles()
