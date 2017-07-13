@@ -1,5 +1,9 @@
       <div id="mainarticle">
+        <div id="scale">
+          <img id="scale" src="assets/Scale@2x.png"/>
+        </div>
         <div id="category" class="categorytitle">{{articleService.getTitle()}}</div>
+        <div class="categoryrating">{{articleService.getAvgCategoryValue()}}</div>
 
         <br>
         <hr class="divider">
@@ -20,9 +24,10 @@
                <div class="childarticle fade-in" *ngFor="let article of articleService.getArts(selected); let i=index">
                  <md-grid-tile>
                   <div class="articleobj" layout="column" layout-fill>
-                    <template [ngIf]="i<15">
+                    <template [ngIf]="i>=0">
                       <div class="articleUrl">
                         <a href="{{article.url}}">{{article.title}}</a>
+                        <div class ="brand">{{article.brand}}</div>
                       </div>
                       <div class="gridimg articleitem">
                         <img class="gridimg" [src]="article.image_url" />

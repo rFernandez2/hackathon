@@ -61,6 +61,40 @@ img.gridimg {
   margin-left: 10px;
 }
 
+#scale {
+  width: 100%;
+  margin: 10px 50px 30px 80px;
+}
+
+img#scale {
+  width: 75%;
+}
+
+a.url {
+  font-weight: bolder;
+}
+
+.brand {
+    color: #689EA8;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.categoryrating {
+  margin-left: 10px;
+  font-color: 02A3C1;
+  color: #02A3C1;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.categorytitle {
+  display: inline-block;
+}
+
+
+
 #articles {
 
 }
