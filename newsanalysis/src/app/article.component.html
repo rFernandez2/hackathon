@@ -15,9 +15,9 @@
           </div>
         </div>
 
-        <div id="articles" layout="column" *ngIf="filteredList">
+        <div id="articles"  layout="column" *ngIf="filteredList">
           <md-grid-list cols="3" rowHeight="1:1.25">
-               <div class="childarticle" *ngFor="let article of articleService.getArts(selected); let i=index">
+               <div class="childarticle fade-in" *ngFor="let article of articleService.getArts(selected); let i=index">
                  <md-grid-tile>
                   <div class="articleobj" layout="column" layout-fill>
                     <template [ngIf]="i<15">
