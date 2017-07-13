@@ -46,9 +46,12 @@ img.gridimg {
     font-size: 14px;
     color: #4A4A4A;
     border-radius: 5px;
-    border: 3px solid #3CCA30;
-    width: 260px;
+    border: 3px solid #33CAE6;
+    width: 50px;
     margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
 }
 
 .mat-grid-tile {
@@ -78,6 +81,7 @@ a.url {
     color: #689EA8;
     font-size: 17px;
     margin-top: 5px;
+    text-transform: capitalize;
 }
 
 .categoryrating {
@@ -91,6 +95,21 @@ a.url {
 
 .categorytitle {
   display: inline-block;
+  text-transform: capitalize;
+}
+
+.sentiment {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #066678;
+}
+
+.category {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bolder;
 }
 
 
