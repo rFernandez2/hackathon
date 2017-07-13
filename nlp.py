@@ -161,7 +161,7 @@ def ez_sentiment(articles):
 def nice_display(st):
     if st == 'equity':
         return 'equities'
-    elif st == 'fixed income':
+    elif st == 'fixed income' or st == 'monetary policy':
         return st
     elif st == 'gold' or st == 'oil' or st == 'copper':
         return 'commodities'
@@ -187,4 +187,6 @@ def run():
     print("Categorizing Articles")
     data = categorize_articles()
     print("Generating JSON")
-    return toJson(data)
+    dicts = toJson(data)
+    vals = get_avgs(dicts)
+    return vals
