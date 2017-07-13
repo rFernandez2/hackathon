@@ -1,3 +1,9 @@
+#mainarticle {
+  width: 75%;
+  position: relative;
+  left: 65px;
+}
+
 .gridimg {
   overflow: hidden;
 }
@@ -8,7 +14,7 @@ img.gridimg {
 }
 
 .articleobj {
-  width: 400px;
+  width: 300px;
   height: 100%;
   float: left;
 }
@@ -23,7 +29,7 @@ img.gridimg {
     color: #4A4A4A;
     border-radius: 5px;
     border: 3px solid #3CCA30;
-    width: 375px;
+    width: 260px;
     margin-left: 10px;
 }
 
@@ -34,8 +40,58 @@ img.gridimg {
 }
 .articleUrl{
   height: 90px;
+  margin-left: 10px;
+}
+
+#articles {
+
+}
+
+.childarticle {
+
 }
 
 
-/* grid */
+/* sidebar */
 
+
+#sidebar {
+height: 100%;
+width: 200px;
+position: fixed;
+z-index: 0;
+top: 0;
+background-color: #111;
+overflow-x: hidden;
+padding-top: 60px;
+transition: 0.5s;
+right: 0;
+background: #33CAE6;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+padding-top: 95px;
+}
+
+#filterText{
+color: white;
+text-align: center;
+padding-top:40px;
+font-size: 18pt;
+}
+
+#radio-btn-group{
+color: white;
+padding-left: 30px;
+font-size: 10pt;
+}
+
+#submit-btn{
+padding-left:50px;
+}
+
+#filterSubmit{
+width:100px;
+height: 30px;
+border-radius: 5px;
+border-color: white;
+background-color: white;
+}

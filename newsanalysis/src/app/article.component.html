@@ -1,8 +1,20 @@
       <div id="mainarticle">
-        <div *ngIf="articles">
-              <div *ngFor="let article of articles.articles; let i=index">
+        <div id='sidebar'>
+          <div id='filterText'><strong>Filter</strong></div><br><br>
+          <div id="radio-btn-group">
+            <input type="radio" name="gender" id ="equity-btn" ng-checked = "true" value="equity" (click) = "clickRadio('equity')" > Equity<br><br>
+            <input type="radio" name="gender" id ="fixed_income-btn" value="fixed_income" (click) = "clickRadio('fixed income')"> Fixed Income<br><br>
+            <input type="radio" name="gender" id ="monetary_policy-btn" value="monetary_policy" (click) = "clickRadio('monetary policy')"> Monetary Policy<br><br>
+            <input type="radio" name="gender" id ="commodities-btn" value="commodities" (click) = "clickRadio('commodities')"> Commodities<br><br>
+            <input type="radio" name="gender" id ="alternatives-btn" value="alternatives" (click) ="clickRadio('alternatives')"> Alternatives
+          </div>
+        </div>
+        <div id="articles" layout="column" *ngIf="filteredList">
+          <md-grid-list cols="3" rowHeight="1:1.25">
+               <div class="childarticle" *ngFor="let article of articleService.getArts(selected); let i=index">
+                 <md-grid-tile>
                   <div class="articleobj" layout="column" layout-fill>
-                    <template [ngIf]="i<5">
+                    <template [ngIf]="i<15">
                       <div class="articleUrl">
                         <a href="{{article.url}}">{{article.title}}</a>
                       </div>
@@ -12,6 +24,8 @@
                       <div class="articleitem articlecategory">{{article.category}}</div><br><br>
                     </template>
                   </div>
+                 </md-grid-tile>
               </div>
+          </md-grid-list>
         </div>
       </div>
