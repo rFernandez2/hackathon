@@ -1,0 +1,168 @@
+#mainarticle {
+  width: 75%;
+  position: relative;
+  left: 65px;
+}
+
+.gridimg {
+  overflow: hidden;
+}
+
+img.gridimg {
+    height: 250px;
+    width: 400px;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.fade-in {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.articleobj {
+  width: 300px;
+  height: 100%;
+  float: left;
+}
+
+.articleitem {
+    padding: 10px;
+
+}
+
+.articlecategory {
+    font-size: 14px;
+    color: #4A4A4A;
+    border-radius: 5px;
+    border: 3px solid #33CAE6;
+    width: 50px;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.mat-grid-tile {
+    display: block;
+    position: absolute;
+    overflow: visible;
+}
+.articleUrl{
+  height: 90px;
+  margin-left: 10px;
+}
+
+#scale {
+  width: 100%;
+  margin: 10px 50px 30px 80px;
+}
+
+img#scale {
+  width: 75%;
+}
+
+a.url {
+  font-weight: bolder;
+}
+
+.brand {
+    color: #689EA8;
+    font-size: 17px;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+
+.categoryrating {
+  margin-left: 10px;
+  font-color: 02A3C1;
+  color: #02A3C1;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.categorytitle {
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.sentiment {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #066678;
+}
+
+.category {
+    display: inline-block;
+    padding-left: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+
+
+#articles {
+
+}
+
+.childarticle {
+
+}
+
+
+/* sidebar */
+
+
+#sidebar {
+height: 100%;
+width: 200px;
+position: fixed;
+z-index: 0;
+top: 0;
+background-color: #111;
+overflow-x: hidden;
+padding-top: 60px;
+transition: 0.5s;
+right: 0;
+background: #33CAE6;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+padding-top: 95px;
+}
+
+#filterText{
+color: white;
+text-align: center;
+padding-top:40px;
+font-size: 18pt;
+}
+
+#radio-btn-group{
+color: white;
+padding-left: 30px;
+font-size: 10pt;
+}
+
+#submit-btn{
+padding-left:50px;
+}
+
+#filterSubmit{
+width:100px;
+height: 30px;
+border-radius: 5px;
+border-color: white;
+background-color: white;
+}
